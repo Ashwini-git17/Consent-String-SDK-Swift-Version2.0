@@ -15,6 +15,11 @@
 		0BA327D9228EC84900606697 /* ConsentStringBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA327D8228EC84900606697 /* ConsentStringBuilderTests.swift */; };
 		0BA327DB228ED14600606697 /* VendorEncodingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA327DA228ED14600606697 /* VendorEncodingType.swift */; };
 		0BAECEE12292B9A000CC4DDB /* BinaryStringTestSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAECEE02292B9A000CC4DDB /* BinaryStringTestSupport.swift */; };
+		EEF2A40E2CDE0BA400A8D9B7 /* ConsentStringV2Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF2A40D2CDE0BA400A8D9B7 /* ConsentStringV2Protocol.swift */; };
+		EEF2A4102CDE0BFA00A8D9B7 /* NSRange+BitRanges.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF2A40F2CDE0BFA00A8D9B7 /* NSRange+BitRanges.swift */; };
+		EEF2A4122CDE0C2B00A8D9B7 /* ConsentStringBuilderV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF2A4112CDE0C2B00A8D9B7 /* ConsentStringBuilderV2.swift */; };
+		EEF2A4142CDE0C6300A8D9B7 /* ConsentStringBuildingV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF2A4132CDE0C6300A8D9B7 /* ConsentStringBuildingV2.swift */; };
+		EEF2A4162CDE0C8900A8D9B7 /* ConsentStringV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF2A4152CDE0C8900A8D9B7 /* ConsentStringV2.swift */; };
 		F142B52A2093A1C5001ABE60 /* Consent_String_SDK_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F142B5202093A1C5001ABE60 /* Consent_String_SDK_Swift.framework */; };
 		F142B52F2093A1C5001ABE60 /* Consent_String_SDK_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F142B52E2093A1C5001ABE60 /* Consent_String_SDK_SwiftTests.swift */; };
 		F142B5312093A1C5001ABE60 /* Consent_String_SDK_Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = F142B5232093A1C5001ABE60 /* Consent_String_SDK_Swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -44,6 +49,11 @@
 		0BA327D8228EC84900606697 /* ConsentStringBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentStringBuilderTests.swift; sourceTree = "<group>"; };
 		0BA327DA228ED14600606697 /* VendorEncodingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorEncodingType.swift; sourceTree = "<group>"; };
 		0BAECEE02292B9A000CC4DDB /* BinaryStringTestSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryStringTestSupport.swift; sourceTree = "<group>"; };
+		EEF2A40D2CDE0BA400A8D9B7 /* ConsentStringV2Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentStringV2Protocol.swift; sourceTree = "<group>"; };
+		EEF2A40F2CDE0BFA00A8D9B7 /* NSRange+BitRanges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSRange+BitRanges.swift"; sourceTree = "<group>"; };
+		EEF2A4112CDE0C2B00A8D9B7 /* ConsentStringBuilderV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentStringBuilderV2.swift; sourceTree = "<group>"; };
+		EEF2A4132CDE0C6300A8D9B7 /* ConsentStringBuildingV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentStringBuildingV2.swift; sourceTree = "<group>"; };
+		EEF2A4152CDE0C8900A8D9B7 /* ConsentStringV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentStringV2.swift; sourceTree = "<group>"; };
 		F142B5202093A1C5001ABE60 /* Consent_String_SDK_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Consent_String_SDK_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F142B5232093A1C5001ABE60 /* Consent_String_SDK_Swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Consent_String_SDK_Swift.h; sourceTree = "<group>"; };
 		F142B5242093A1C5001ABE60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,6 +86,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EEF2A40A2CDE07F700A8D9B7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0BA327DA228ED14600606697 /* VendorEncodingType.swift */,
+				F142B53B2093A206001ABE60 /* ConsentStringError.swift */,
+				F142B53E2093A207001ABE60 /* Data.swift */,
+				0B8FBC75229558F3002F733D /* VendorIdentifier.swift */,
+				0BA327D4228EC1A300606697 /* Purpose.swift */,
+				F142B53D2093A207001ABE60 /* String.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		EEF2A40B2CDE0A1400A8D9B7 /* Version1 */ = {
+			isa = PBXGroup;
+			children = (
+				F142B53C2093A206001ABE60 /* ConsentStringProtocol.swift */,
+				F142B53A2093A206001ABE60 /* ConsentString.swift */,
+				0BA327D2228EA54A00606697 /* ConsentStringBuilder.swift */,
+				0B3E03CD22A0206C0078D316 /* ConsentStringBuilding.swift */,
+				0B8FBC7122954495002F733D /* NSRange+ConsentString.swift */,
+			);
+			path = Version1;
+			sourceTree = "<group>";
+		};
+		EEF2A40C2CDE0B5A00A8D9B7 /* Version2 */ = {
+			isa = PBXGroup;
+			children = (
+				EEF2A40D2CDE0BA400A8D9B7 /* ConsentStringV2Protocol.swift */,
+				EEF2A40F2CDE0BFA00A8D9B7 /* NSRange+BitRanges.swift */,
+				EEF2A4112CDE0C2B00A8D9B7 /* ConsentStringBuilderV2.swift */,
+				EEF2A4132CDE0C6300A8D9B7 /* ConsentStringBuildingV2.swift */,
+				EEF2A4152CDE0C8900A8D9B7 /* ConsentStringV2.swift */,
+			);
+			path = Version2;
+			sourceTree = "<group>";
+		};
 		F142B5162093A1C5001ABE60 = {
 			isa = PBXGroup;
 			children = (
@@ -97,19 +144,11 @@
 		F142B5222093A1C5001ABE60 /* Consent String SDK Swift */ = {
 			isa = PBXGroup;
 			children = (
-				F142B53C2093A206001ABE60 /* ConsentStringProtocol.swift */,
-				F142B53A2093A206001ABE60 /* ConsentString.swift */,
-				F142B53B2093A206001ABE60 /* ConsentStringError.swift */,
-				F142B53E2093A207001ABE60 /* Data.swift */,
-				F142B53D2093A207001ABE60 /* String.swift */,
+				EEF2A40A2CDE07F700A8D9B7 /* Common */,
+				EEF2A40B2CDE0A1400A8D9B7 /* Version1 */,
+				EEF2A40C2CDE0B5A00A8D9B7 /* Version2 */,
 				F142B5232093A1C5001ABE60 /* Consent_String_SDK_Swift.h */,
 				F142B5242093A1C5001ABE60 /* Info.plist */,
-				0BA327D2228EA54A00606697 /* ConsentStringBuilder.swift */,
-				0B3E03CD22A0206C0078D316 /* ConsentStringBuilding.swift */,
-				0BA327D4228EC1A300606697 /* Purpose.swift */,
-				0B8FBC75229558F3002F733D /* VendorIdentifier.swift */,
-				0B8FBC7122954495002F733D /* NSRange+ConsentString.swift */,
-				0BA327DA228ED14600606697 /* VendorEncodingType.swift */,
 			);
 			path = "Consent String SDK Swift";
 			sourceTree = "<group>";
@@ -242,10 +281,15 @@
 				0BA327DB228ED14600606697 /* VendorEncodingType.swift in Sources */,
 				0B8FBC7222954495002F733D /* NSRange+ConsentString.swift in Sources */,
 				F142B5472093A207001ABE60 /* Data.swift in Sources */,
+				EEF2A40E2CDE0BA400A8D9B7 /* ConsentStringV2Protocol.swift in Sources */,
 				F142B5412093A207001ABE60 /* ConsentStringError.swift in Sources */,
+				EEF2A4162CDE0C8900A8D9B7 /* ConsentStringV2.swift in Sources */,
 				F142B5452093A207001ABE60 /* String.swift in Sources */,
 				F142B53F2093A207001ABE60 /* ConsentString.swift in Sources */,
+				EEF2A4142CDE0C6300A8D9B7 /* ConsentStringBuildingV2.swift in Sources */,
 				0B3E03CE22A0206C0078D316 /* ConsentStringBuilding.swift in Sources */,
+				EEF2A4102CDE0BFA00A8D9B7 /* NSRange+BitRanges.swift in Sources */,
+				EEF2A4122CDE0C2B00A8D9B7 /* ConsentStringBuilderV2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +447,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Consent String SDK Swift/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -430,6 +475,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Consent String SDK Swift/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -7,7 +7,7 @@ It should be used by anyone who receives or sends consent information like vendo
 
 The IAB specification for the consent string format is available on the [IAB Github](https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework/blob/master/Consent%20string%20and%20vendor%20list%20formats%20v1.1%20Final.md) (section "Vendor Consent Cookie Format").
 
-**This library fully supports the version v1.1 of the specification. It can encode and decode consent strings with version bit 1.**
+**This library fully supports the version v2.0 of the specification. It can encode and decode consent strings with version bit 1.**
 
 #### IAB Europe Transparency and Consent Framework 
 
